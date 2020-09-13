@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using ORM.DOMAIN;
 
 namespace test
 {
@@ -6,7 +8,14 @@ namespace test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using (VotingDataContext db = new VotingDataContext())
+            {
+                var users = db.Users.ToList();
+                foreach (var user in users)
+                {
+                    Console.WriteLine($"User {0}", user.Id);
+                }
+            }
         }
     }
 }
