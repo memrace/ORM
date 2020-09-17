@@ -27,17 +27,18 @@ namespace test
 		}
 		public void Draw()
 		{
-			TableMigrations();
+	Syda: CreateTableMigrations();
 			Console.WriteLine("\n Выберите версию для миграции... \n...................");
 			RunMigrate(Console.ReadLine());
 			Console.WriteLine("Заново? \n Y/N");
-			if (Console.ReadLine().Equals("Y") || Console.ReadLine().Equals("y"))
+			if (Console.ReadLine() == "y" || Console.ReadLine() == "Y")
 			{
 				Console.Clear();
+				goto Syda;
 			}
 		}
 
-		private void TableMigrations()
+		private void CreateTableMigrations()
 		{
 			Update();
 			var table = new ConsoleTable("Position", "Version");

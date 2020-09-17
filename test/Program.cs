@@ -9,6 +9,7 @@ namespace test
             {
                 var drawler = new ConsoleDrawler(db);
                 drawler.Draw();
+
             }
         }
     }
