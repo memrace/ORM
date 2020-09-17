@@ -6,7 +6,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ORM\ORM.DOMAIN.csproj" />
+      <PackageReference Include="ConsoleMenu-simple" Version="2.4.0" />
+      <PackageReference Include="ConsoleTables" Version="2.4.2" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.8" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.0" />
     </ItemGroup>
 
 </Project>

@@ -1,20 +1,14 @@
-﻿using System;
-using System.Linq;
-using ORM.DOMAIN;
-
+﻿using Microsoft.EntityFrameworkCore;
 namespace test
 {
     class Program
     {
         static void Main(string[] args)
         {
-            using (VotingDataContext db = new VotingDataContext())
+            using (ApplicationDbContext db = new ApplicationDbContext())
             {
-                var users = db.Users.ToList();
-                foreach (var user in users)
-                {
-                    Console.WriteLine($"User {0}", user.Id);
-                }
+                var drawler = new ConsoleDrawler(db);
+                drawler.Draw();
             }
         }
     }

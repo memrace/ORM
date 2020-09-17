@@ -1,4 +1,4 @@
-﻿namespace ORM.DOMAIN
+﻿namespace test
 {
     public class Users
     {

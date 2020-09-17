@@ -1,16 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace ORM.DOMAIN
+namespace test
 {
-    public class VotingDataContext: DbContext
+    public class ApplicationDbContext: DbContext
     {
         public DbSet<Users> Users { get; set; }
         
-        
+        public DbSet<Speech> Speeches { get; set; }
+        public DbSet<UserProfile> Profiles { get; set; }
 
-        public VotingDataContext()
+        public ApplicationDbContext()
         {
-            Database.EnsureCreated();
+           
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
